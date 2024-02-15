@@ -26,6 +26,28 @@
     "web": {
       "favicon": "./src/assets/favicon.png"
     },
-    "plugins": [["react-native-imglysdk"]]
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow app to access your camera.",
+          "microphonePermission": "Allow app to access your mic."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends.",
+          "cameraPermission": "Allow app to access your camera.",
+          "microphonePermission": "Allow app to access your mic."
+        }
+      ],
+      ["react-native-imglysdk"]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "15c72e31-4f59-43ca-902b-dbc7652635c6"
+      }
+    }
   }
 }
